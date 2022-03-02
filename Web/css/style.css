@@ -1,0 +1,39 @@
+/*common*/
+.fix{ position: fixed;}
+
+/*layout*/
+.aniWrap{ 
+    left: 0; right: 0; top: 0; bottom: 0;
+    background-color: white;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.bgBlack{
+    animation-name:toBlackbg ;
+}
+.bgYellow{
+    animation-name:toYellowbg ;
+}
+.bgRed{
+    animation-name:toRedbg ;
+}
+/*add class,remove class 로 클릭했을때 키프레임이 되도록 할 수 있다.*/
+
+@keyframes toBlackbg{ /*브라우저마다 안되는곳이 있다.*/
+    0%{ background-color: white;}
+    100%{ background-color: black;}
+}
+
+@keyframes toYellowbg{ /*브라우저마다 안되는곳이 있다.*/
+    0%{ background-color: white;}
+    100%{ background-color: rgb(166, 255, 0);}
+}
+@keyframes toRedbg{ /*브라우저마다 안되는곳이 있다.*/
+    0%{ background-color: white;}
+    100%{ background-color: rgb(255, 0, 0);}
+}
+
